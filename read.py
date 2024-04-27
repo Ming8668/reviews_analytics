@@ -43,5 +43,15 @@ good = []
 for d in data:
 	if 'good' in d:
 		good.append(d)
-print('一共有', len(good), '筆資料留言')
+print('一共有', len(good), '筆資料留言含有good')
 print(good[0])
+print('-' * 40)
+
+
+# list comprehension 清單快寫法
+
+bad = [d for d in data if 'bad' in d]
+
+print('一共有', len(bad), '筆資料留言含有bad')
+print(good[0])
+print('-' * 40)
