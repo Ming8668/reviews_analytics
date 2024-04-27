@@ -15,6 +15,7 @@ with open('reviews.txt', 'r') as f:
 # print(data[1])
 
 print('檔案讀取完畢, 總共有', len(data), '筆資料')
+print('-' * 40)
 
 
 # 求每筆資料平均長度
@@ -26,3 +27,12 @@ for d in data:
 
 average_len = sum_len / len(data)
 print('每筆資料的平均長度為:', average_len)
+print('-' * 40)
+
+# 清單的篩選
+
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('一共有', len(new), '筆資料留言長度小於100')
